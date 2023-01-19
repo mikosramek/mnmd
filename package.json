@@ -1,0 +1,11 @@
+{
+  "name": "mnmd",
+  "version": "1.0.0",
+  "description": "A simple markdown parser for neocities",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mikosramek <miko@mikosramek.ca> (https://mikosramek.ca)",
+  "license": "ISC"
+}
