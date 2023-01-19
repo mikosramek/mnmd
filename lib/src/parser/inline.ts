@@ -29,7 +29,7 @@ exports.parseLink = (line: string) => {
 };
 
 exports.parseLine = (line: string) =>
-  line.replace(/---/gi, "<div class='mnmd-linebreak' />");
+  line.replace(/---/gi, "<div class='mnmd-linebreak'></div>");
 
 exports.parseInlines = (line: string) => {
   // visually-bold

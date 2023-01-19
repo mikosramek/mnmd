@@ -1,2 +1,5 @@
-exports.convert = require("./src/parser");
-exports.load = require("./src/loader");
+module.exports = {
+  convert: require("./src/parser"),
+  load: require("./src/loader"),
+  builder: require("./src/builder"),
+};

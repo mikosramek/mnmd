@@ -10,3 +10,5 @@ const loadFile = (filePath: string) => {
 };
 
 module.exports = loadFile;
+
+export {};
