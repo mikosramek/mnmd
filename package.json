@@ -2,10 +2,17 @@
   "name": "mnmd",
   "version": "1.0.0",
   "description": "A simple markdown parser for neocities",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepublish": "npm run build",
+    "build": "tsc",
+    "test": "npm run build && node tests/index.js"
   },
   "author": "mikosramek <miko@mikosramek.ca> (https://mikosramek.ca)",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "typescript": "^4.9.4"
+  }
 }
