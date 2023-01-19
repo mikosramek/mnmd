@@ -39,9 +39,24 @@ const getCSS = () => {
   });
 };
 
+const copyCSS = (destination: string) => {
+  return new Promise((res, rej) => {
+    fs.copyFile(
+      path.resolve(__dirname, "..", "styles", "style.css"),
+      destination,
+      fs.constants.COPYFILE_FICLONE,
+      (err: Error) => {
+        if (err) rej(err);
+        res(true);
+      }
+    );
+  });
+};
+
 module.exports = {
   build: buildPage,
   getCSS,
+  copyCSS,
 };
 
 export {};

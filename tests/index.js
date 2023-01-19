@@ -12,16 +12,7 @@ const compileBlogPosts = async () => {
     );
 
     const distPath = path.resolve(__dirname, "dist");
-    const css = await mnmd.builder.getCSS();
-
-    await fs.writeFile(
-      path.resolve(distPath, "mnmd.css"),
-      css,
-      "utf-8",
-      (err) => {
-        if (err) console.error(err);
-      }
-    );
+    await mnmd.builder.copyCSS(path.resolve(distPath, "mnmd.css"));
 
     mnmd.builder.build({
       template,
